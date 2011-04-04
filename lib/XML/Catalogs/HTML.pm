@@ -5,7 +5,7 @@ package XML::Catalogs::HTML;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v1.0.0');
+use version; our $VERSION = qv('v1.0.1');
 
 use XML::Catalogs qw( );
 our @ISA = 'XML::Catalogs';
@@ -21,7 +21,7 @@ XML::Catalogs::HTML - Catalog of HTML and XHTML DTDs
 
 =head1 VERSION
 
-Version 1.0.0
+Version 1.0.1
 
 
 =head1 SYNOPSIS
@@ -52,11 +52,14 @@ Instead, it relies on them being in the system's XML catalog.
 This is not always configured properly for a number of
 reasons.
 
+An XML catalog is simply a set of DTDs and a table of contents
+that associates DTD identifiers with the DTDs.
+
 This module provides a catalog of HTML and XHTML DTDs
 in case they are not present in the system's catalog.
 
 It works on all platforms, it works without requiring root
-priviledges, and it works with CPAN's dependancy system.
+priviledges, and it works with CPAN's dependency system.
 
 Currently, only the DTDs for HTML 4.01 and
 XHTML 1.0 are included in this distribution.
@@ -67,13 +70,13 @@ Please let me know if you need earlier versions.
 
 =over
 
-=item C<<use XML::Catalogs::HTML -libxml>>
+=item C<< use XML::Catalogs::HTML -libxml >>
 
 This loads XML::Catalogs::HTML and calls
-C<<XML::Catalogs::HTML->notify_libxml()>>
+C<< XML::Catalogs::HTML->notify_libxml() >>
 
 
-=item C<<XML::Catalogs::HTML->notify_libxml()>>
+=item C<< XML::Catalogs::HTML->notify_libxml() >>
 
 This method informs L<XML::LibXML> of this catalog.
 XML::LibXML will use the local DTDs when parsing
@@ -81,17 +84,17 @@ HTML and XHTML documents. This only affects the
 current process.
 
 This mechanism does not stop working when XML::LibXML's
-C<<->no_network(1)>> option is used. When using that
+C<< ->no_network(1) >> option is used. When using that
 option, XML::LibXML refrains from downloading remote
 resources.
 
 
-=item C<<XML::Catalogs::HTML->get_catalog_url()>>
+=item C<< XML::Catalogs::HTML->get_catalog_url() >>
 
 Returns a file:// URL to the catalog.
 
 
-=item C<<XML::Catalogs::HTML->get_catalog_path()>>
+=item C<< XML::Catalogs::HTML->get_catalog_path() >>
 
 Returns the file path of the catalog.
 
@@ -109,6 +112,8 @@ Returns the file path of the catalog.
 =item * L<XML::Catalogs>, this module's base class.
 
 =item * L<HTML::DTD>, an alternate source for HTML and XHTML DTDs.
+
+=item * L<http://www.w3.org/blog/systeam/2008/02/08/w3c_s_excessive_dtd_traffic>, An example of the real world effects of not having local DTDs.
 
 
 =back
