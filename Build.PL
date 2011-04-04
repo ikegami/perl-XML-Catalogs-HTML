@@ -5,6 +5,7 @@ use Module::Build 0.36;
 
 my $build = Module::Build->new(
     module_name => 'XML::Catalogs::HTML',
+    license     => 'open_source',  # Mix of CC0_1_0 and W3C Document License
     configure_requires => {
         'Module::Build' => 0.36,
     },

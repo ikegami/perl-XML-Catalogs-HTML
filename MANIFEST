@@ -1,7 +1,7 @@
 Build.PL
-Changes
+Changes.txt
 MANIFEST
-README
+README.txt
 lib/XML/Catalogs/HTML.pm
 share/html/catalog.xml
 share/html/html401-frameset.dtd
@@ -18,4 +18,7 @@ share/html/xhtml1-strict.dtd
 share/html/xhtml1-transitional.dtd
 t/00_load.t
 t/01_libxml.t
+t/devel-pod-coverage.t
+t/pod.t
 META.yml
+META.json

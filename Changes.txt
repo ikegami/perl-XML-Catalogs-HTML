@@ -1,5 +1,8 @@
 Revision history for XML-Catalogs-HTML
 
+1.0.3   2011/03/28
+        Specified license more explicitly.
+
 1.0.2   2010/04/27
         Added an XML::LibXML version requirement for test t/01_libxml.t.
 
