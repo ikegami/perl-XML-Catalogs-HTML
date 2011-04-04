@@ -5,7 +5,7 @@ package XML::Catalogs::HTML;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v1.0.1');
+use version; our $VERSION = qv('v1.0.2');
 
 use XML::Catalogs qw( );
 our @ISA = 'XML::Catalogs';
@@ -21,7 +21,7 @@ XML::Catalogs::HTML - Catalog of HTML and XHTML DTDs
 
 =head1 VERSION
 
-Version 1.0.1
+Version 1.0.2
 
 
 =head1 SYNOPSIS
@@ -84,9 +84,10 @@ HTML and XHTML documents. This only affects the
 current process.
 
 This mechanism does not stop working when XML::LibXML's
-C<< ->no_network(1) >> option is used. When using that
-option, XML::LibXML refrains from downloading remote
-resources.
+C<< no_network => 1 >> option is used.
+
+Note that XML::LibXML version 1.53 is required for
+this features.
 
 
 =item C<< XML::Catalogs::HTML->get_catalog_url() >>

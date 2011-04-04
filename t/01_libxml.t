@@ -6,11 +6,16 @@ use warnings;
 use Test::More;
 
 BEGIN {
-    if (!eval { require XML::LibXML; }) {
-        plan skip_all => 'XML::LibXML not installed';
-    } else {
-        plan tests => 3;
-    }
+	# ->load_catalog()  1.53
+	# ->no_network()    1.63
+
+    eval { require XML::LibXML }
+        or plan skip_all => 'XML::LibXML not installed. Version 1.63 is required for this test';
+
+    eval { XML::LibXML->VERSION(1.63); 1 }
+        or plan skip_all => 'Version 1.63 of XML::LibXML is required for this test';
+
+    plan tests => 3;
 }
 
 use XML::Catalogs::HTML;
