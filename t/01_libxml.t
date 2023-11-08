@@ -32,7 +32,7 @@ my $xhtml = <<'__EOI__';
 </html>
 __EOI__
 
-my $parser = XML::LibXML->new();
+my $parser = XML::LibXML->new(load_ext_dtd => 1);
 $parser->no_network(1);
 
 my $doc;
