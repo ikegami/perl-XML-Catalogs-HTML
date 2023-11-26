@@ -32,8 +32,10 @@ my $xhtml = <<'__EOI__';
 </html>
 __EOI__
 
-my $parser = XML::LibXML->new();
-$parser->no_network(1);
+my $parser = XML::LibXML->new(
+    load_ext_dtd => 1,
+    no_network   => 1,
+);
 
 my $doc;
 SKIP: {

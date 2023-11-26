@@ -15,6 +15,7 @@ my $build = Module::Build->new(
         'Test::More' => 0,
     },
     requires => {
+        'parent'        => 0,
         'XML::Catalogs' => 0,
         'version'       => 0,
     },

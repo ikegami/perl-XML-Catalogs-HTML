@@ -1,14 +1,12 @@
-use 5;
 
 package XML::Catalogs::HTML;
 
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v1.0.3');
+use version; our $VERSION = qv('v1.4.0');
 
-use XML::Catalogs qw( );
-our @ISA = 'XML::Catalogs';
+use parent 'XML::Catalogs';
 
 1;
 
@@ -21,7 +19,7 @@ XML::Catalogs::HTML - Catalog of HTML and XHTML DTDs
 
 =head1 VERSION
 
-Version 1.0.3
+Version 1.4.0
 
 
 =head1 SYNOPSIS
@@ -82,6 +80,9 @@ This method informs L<XML::LibXML> of this catalog.
 XML::LibXML will use the local DTDs when parsing
 HTML and XHTML documents. This only affects the
 current process.
+
+To have any effect, XML::LibXML's
+C<< load_ext_dtd => 1 >> option must be used.
 
 This mechanism does not stop working when XML::LibXML's
 C<< no_network => 1 >> option is used.
