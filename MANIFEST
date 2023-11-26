@@ -1,6 +1,7 @@
 Build.PL
-Changes.txt
+Changes
 MANIFEST
+MANIFEST.SKIP
 README.txt
 lib/XML/Catalogs/HTML.pm
 share/html/catalog.xml
