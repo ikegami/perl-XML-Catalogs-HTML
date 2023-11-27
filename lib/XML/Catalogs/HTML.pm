@@ -4,7 +4,7 @@ package XML::Catalogs::HTML;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v1.4.0');
+use version; our $VERSION = qv('v1.5.0');
 
 use parent 'XML::Catalogs';
 
@@ -19,7 +19,7 @@ XML::Catalogs::HTML - Catalog of HTML and XHTML DTDs
 
 =head1 VERSION
 
-Version 1.4.0
+Version 1.5.0
 
 
 =head1 SYNOPSIS
