@@ -1,9 +1,8 @@
 Revision history for XML-Catalogs-HTML
 
-1.6.0   ~~~~-~~-~~
+1.6.0   2023-11-26
         - Switched to ExtUtils::MakeMaker.
         - Updated the URLs of support resources.
-        - ~~~
 
 1.4.0   2023-11-26
         - Specified license more explicitly.
