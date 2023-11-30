@@ -1,6 +1,7 @@
 Revision history for XML-Catalogs-HTML
 
 1.8.0   ~~~~-~~-~~
+        - Fix broken conversion from Module::Build to ExtUtils::MakeMaker.
         - ~~~
 
 1.6.0   2023-11-26
