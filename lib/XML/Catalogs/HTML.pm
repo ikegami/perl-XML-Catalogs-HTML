@@ -145,9 +145,9 @@ If you need help, the following are great resources:
 
 =over
 
-=item * L<https://stackoverflow.com/|StackOverflow>
+=item * L<StackOverflow|https://stackoverflow.com/>
 
-=item * L<http://www.perlmonks.org/|PerlMonks>
+=item * L<PerlMonks|http://www.perlmonks.org/>
 
 =item * You may also contact the author directly.
 
